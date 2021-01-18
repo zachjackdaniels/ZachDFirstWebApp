@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Zach Daniels IS413 Site</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="img/favicon.ico" rel="icon"/>
+</head>
+
+<body>
+    <h1>
+        Zach Daniels IS413 Web App
+    </h1>
+    <img src="img/IMG_3777.jpg"/>
+    <p>I hope to broaden my knowledge of ASP.NET core. I also hope that I can take things that I have learned in this class and be able to apply it to my work on campus.</p>
+    <label for="companies">A list of the top 3 companies I would like to work for after I graduate.</label>
+    <ol id="companies">
+        <li>KPMG</li>
+        <li>Moss Adams</li>
+        <li>Podium</li>
+    </ol>
+
+    <h2>Grade Calculator</h2>
+    <form >
+        <label for="assignments">Assignments Percentage</label>
+        <input id="assignments" type="number" min="0" max="100"/>
+        <br />
+        <label for="groupP">Group Project Percentage</label>
+        <input id="groupP" type="number" min="0" max="100"/>
+        <br />
+        <label for="quizzes">Quizzes Percentage</label>
+        <input id="quizzes" type="number" min="0" max="100" />
+        <br />
+        <label for="exams">Exams Percentage</label>
+        <input id="exams" type="number" min="0" max="100" />
+        <br />
+        <label for="intex">INTEX Percentage</label>
+        <input id="intex" type="number" min="0" max="100" />
+        <br />
+        <label for="result" >Final Grade</label>
+        <input id="result" disabled />
+        <br />
+        <button type="button" onclick="gradeCalculator()">Calculate Grade</button>
+
+    </form>
+    <script src="js/gradeCalculator.js"></script>
+</body>
+</html>
