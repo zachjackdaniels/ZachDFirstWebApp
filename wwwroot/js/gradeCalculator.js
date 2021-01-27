@@ -1,10 +1,11 @@
-﻿function gradeCalculator() {
+﻿$("#submitButton").click(function (event) {
+    event.preventDefault();
 
-    var assignments = document.getElementById("assignments").value;
-    var groupP = document.getElementById("groupP").value;
-    var quiz = document.getElementById("quizzes").value;
-    var exams = document.getElementById("exams").value;
-    var intex = document.getElementById("intex").value;
+    var assignments = $("#assignments").val();
+    var groupP = $("#groupP").val();
+    var quiz = $("#quizzes").val();
+    var exams = $("#exams").val();
+    var intex = $("#intex").val();
 
     /*Calculate weighted grades*/
     var wAssignment = assignments * .50;
@@ -17,7 +18,7 @@
     var finalG = wAssignment + wGroup + wQuiz + wExam + wIntex;
     finalG = Math.floor(finalG);
 
-/*Calculate final weighted letter grade*/
+    /*Calculate final weighted letter grade*/
     var letterG = "";
     if (finalG >= 94) {
         letterG = "A"
@@ -44,7 +45,8 @@
     } else if (finalG < 60) {
         letterG = "E"
     }
-    
-    document.getElementById("result1").value = finalG;
-    document.getElementById("result2").value = letterG;
-}
+
+    /* Return the calculated values back to the page */
+    $("#result1").val(finalG);
+    $("#result2").val(letterG);
+});
