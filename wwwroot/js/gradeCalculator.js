@@ -1,6 +1,6 @@
-﻿$("#submitButton").click(function (event) {
-    event.preventDefault();
-
+﻿$("#submitButton").click(function () {
+    //event.preventDefault();
+    
     var assignments = $("#assignments").val();
     var groupP = $("#groupP").val();
     var quiz = $("#quizzes").val();

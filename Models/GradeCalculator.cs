@@ -8,21 +8,26 @@ namespace ZachDFirstWebApp.Models
 {
     public class GradeCalculator
     {
-        [Required]
-        [Range(0,100)]
+        [Required(ErrorMessage = "Grade must be between 0 and 100")]
+        [Range(typeof(int), "0", "100")]
         public int assignments { get; set; }
-        [Required]
-        [Range(0, 100)]
+
+        [Required(ErrorMessage = "Grade must be between 0 and 100")]
+        [Range(typeof(int), "0", "100")]
         public int groupP { get; set; }
-        [Required]
-        [Range(0, 100)]
+
+        [Required(ErrorMessage = "Grade must be between 0 and 100")]
+        [Range(typeof(int), "0", "100")]
         public int quizzes { get; set; }
-        [Required]
-        [Range(0, 100)]
+
+        [Required(ErrorMessage = "Grade must be between 0 and 100")]
+        [Range(typeof(int), "0", "100")]
         public int exams { get; set; }
-        [Required]
-        [Range(0, 100)]
+
+        [Required(ErrorMessage = "Grade must be between 0 and 100")]
+        [Range(typeof(int), "0", "100")]
         public int intex { get; set; }
+
 
     }
 }

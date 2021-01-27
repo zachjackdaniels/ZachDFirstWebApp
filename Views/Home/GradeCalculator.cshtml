@@ -36,13 +36,15 @@
             <span asp-validation-for="intex" class="text-danger"></span>
         </div>
 
-        @Html.HiddenFor(x => x.assignments)
+        @*@Html.HiddenFor(x => x.assignments)
         @Html.HiddenFor(x => x.groupP)
         @Html.HiddenFor(x => x.quizzes)
         @Html.HiddenFor(x => x.exams)
-        @Html.HiddenFor(x => x.intex)
+        @Html.HiddenFor(x => x.intex)*@
 
-        <button type="submit" id="submitButton">Calculate Grade</button>
+        @*<button type="submit" id="submitButton">Calculate Grade</button>*@
+
+        <input type="submit" value="Submit Grade" id="submitButton" class="text-danger"/>
 
     </form>
     <div class="m-1 p-1">
@@ -55,5 +57,5 @@
             <input id="result2" disabled />
         </div>
     </div>
-
+     
 </body>
